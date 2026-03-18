@@ -169,7 +169,7 @@ I think the best way to think about this is like you're trying to communicate wi
 
 A common objection is "what if you're in a room with other people?" I just whisper using earphones - I personally like Apple EarPods (not AirPods). They're affordable, high quality enough, and you just whisper into them quietly. I've done it in front of other people and it works well. In offices, people talk anyway - instead of talking to coworkers, you're talking quietly to your voice transcription system. I don't think there's any problem with that. This method works so well that it even works on a plane. It's loud enough that other people won't hear you, but if you speak close enough to the mic, your local model can still understand what you're saying. (In fact, I'm writing this very paragraph using that method on a flight.)
 
-**Update:** Claude Code now has a [built-in voice mode](https://x.com/trq212/status/2028628570692890800).
+**Update:** Claude Code now has a [built-in voice mode](https://x.com/bcherny/status/2032238378389840018). I tested it and it works well, but I still personally use a local model because I find it faster.
 
 ## Tip 3: Break down large problems into smaller ones
 
