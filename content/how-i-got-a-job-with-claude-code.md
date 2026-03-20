@@ -1,24 +1,24 @@
-# How I got a full-time job with Claude Code
+# 我怎麼靠 Claude Code 拿到一份全職工作
 
-I was inspired by [this post](https://www.reddit.com/r/ClaudeAI/comments/1pw14hj/claude_helped_me_get_a_full_time_job/) that mentioned they got a full-time job using Claude Code, and I wanted to share my story here too, just in case I can hopefully inspire someone.
+我是受到[這篇文章](https://www.reddit.com/r/ClaudeAI/comments/1pw14hj/claude_helped_me_get_a_full_time_job/)的啟發，他們提到靠 Claude Code 拿到了一份全職工作，所以我也想在這裡分享我的故事，希望能激勵到一些人。
 
-A few months ago, a company in San Francisco reached out to me on LinkedIn. I had an initial screening call with them and went through the rest of their interview process over a month or so. Throughout the whole process, Claude Code was the thing that helped me the most.
+幾個月前，舊金山的一家公司在 LinkedIn 上聯繫了我。我跟他們做了初步的篩選電話，然後在大約一個月內完成了剩下的面試流程。在整個過程中，Claude Code 是最幫助我的東西。
 
-I first used it for initial research. I gave the URL of the company's website to Claude Code so it could look through it and summarize what it found. I asked it to do web searches for research. I also asked it to look through their open source repo so I could understand their tech better.
+我最初用它來做研究。我把公司網站的 URL 給 Claude Code，讓它瀏覽並整理出摘要。我叫它做網路搜尋來調查研究。我也叫它去看他們的 open source repo，這樣我就能更了解他們的技術。
 
-After the initial few calls, they asked me to do a task that I wasn't that familiar with. It was basically a data engineering task, and I was never a data engineer. It was also supposed to be AI-heavy, and while I had worked with AI before, I hadn't worked with the specific model that would be the best for this task, specifically CLIP. I was kind of stumped, and I only had a few days to prepare.
+在最初幾通電話之後，他們叫我做一個我不太熟悉的任務。基本上是一個 data engineering（資料工程）的任務，而我從來不是 data engineer。它還需要大量用到 AI，雖然我之前有跟 AI 合作過，但我沒用過最適合這個任務的特定模型，具體來說是 CLIP。我有點卡住了，而且只有幾天的準備時間。
 
-But I thought, okay, let's give Claude Code this task and see what I can do with it. I worked with it using a voice transcription system, going back and forth. I initially had a lot of bugs in my code, but eventually I was able to get through everything. At the end of the day, they were impressed with my project. I was kind of unsure if I could make it work in basically a day, but I was able to do that thanks to the power of Opus 4.1 at that time.
+但我想，好吧，把這個任務交給 Claude Code，看看我能做到什麼。我用語音轉文字系統跟它來回溝通。一開始我的程式碼有很多 bug，但最後我把所有東西都搞定了。最終他們對我的專案印象深刻。我原本不太確定自己能不能基本上在一天內搞定，但多虧了當時 Opus 4.1 的強大，我做到了。
 
-Additionally, they asked me to present a blog post I read. So I figured, okay, why not write an entire blog post just for this? I did exactly that, and they were also impressed by that.
+另外，他們叫我報告一篇我讀過的 blog post。所以我想，好吧，何不為此直接寫一整篇 blog post 呢？我就這麼做了，他們對此也印象深刻。
 
-So overall, that's pretty much how I got the job: just knowing how to use Claude Code effectively.
+總的來說，我拿到這份工作的方式就是這樣：知道怎麼有效地使用 Claude Code。
 
-Since then, for the past few months, I've been using it extensively at work too. It's definitely made me a lot more efficient than I would be otherwise, and it's helped me stand out at my current job as well.
+從那之後的這幾個月，我在工作中也大量使用它。它確實讓我比原本有效率得多，也幫助我在目前的工作中脫穎而出。
 
 ---
 
-**References:**
+**參考資料：**
 
-- [The project I built for the interview](https://github.com/ykdojo/poke)
-- [The blog post I wrote for the presentation](https://agenticcoding.substack.com/p/software-engineering-has-always-been)
+- [我為面試做的專案](https://github.com/ykdojo/poke)
+- [我為報告寫的 blog post](https://agenticcoding.substack.com/p/software-engineering-has-always-been)

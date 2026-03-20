@@ -1,19 +1,19 @@
-# How I saved $10,000 using Claude Code
+# 我怎麼用 Claude Code 省了一萬美元
 
-When I started looking for a condo to purchase a few months ago, I knew I needed to find a realtor. It was a relatively new area for me, and I didn't know any good realtor there.
+幾個月前我開始找公寓要買的時候，我知道我需要找一個房仲。那對我來說是一個相對陌生的區域，我不認識那邊的好房仲。
 
-So I started my research like everyone else: with Google searches. I found a few promising ones and emailed them. However, none of them turned out to be good enough...
+所以我就跟大家一樣開始研究：Google 搜尋。我找到幾個看起來不錯的，然後寄了 email 給他們。但是，沒有一個夠好的⋯⋯
 
-So I decided to use Claude Code for additional research. I asked it to find me the best realtors in the area I was looking at, excluding the ones I already contacted. I asked it for only the ones where it could find their email addresses. I asked it to give those email addresses to me directly into my clipboard, comma separated.
+所以我決定用 Claude Code 做額外的研究。我叫它幫我找那個區域最好的房仲，排除掉我已經聯繫過的那些。我叫它只找那些能查到 email 地址的。我叫它把那些 email 地址直接放到我的剪貼簿裡，用逗號分隔。
 
-I didn't even type anything during this whole process - 100% voice input.
+整個過程我連一個字都沒打——100% 語音輸入。
 
-Then, I BCC'ed all of them and told them I'm looking to buy a property. Out of the 15 total "candidates" I had, I filtered based on their initial email responses, and spoke to a few of them. Based on that, I selected one I liked working with.
+然後，我把他們全部 BCC 了，告訴他們我想買房。在總共 15 個「候選人」裡，我根據他們最初的 email 回覆篩選，跟其中幾個通了電話。最後我選了一個我覺得合作起來最順的。
 
-Now fast forward to a few months later, we found a property we liked! When I told this realtor I liked this property, his response was, "Shall we make an offer that's 10% less than the listing price?"
+快轉到幾個月後，我們找到了一個喜歡的物件！當我告訴這個房仲我喜歡這個物件時，他的回應是：「要不要出一個比標價低 10% 的 offer？」
 
-Internally, I was like, "Thank God yes!" I didn't even have to ask him to start with a low offer - he just knew what to do.
+我內心是這樣的：「感謝老天，當然好！」我甚至不用叫他從低價開始出——他就是知道該怎麼做。
 
-Then he kept making the best possible offer he could, and he negotiated as hard as possible. As a result, he saved us $10K in the end. Based on how aggressive he negotiated with the seller's realtor, I don't think any other realtor would've saved us this much.
+然後他一直想辦法出最好的 offer，盡可能地狠狠殺價。結果他幫我們省了一萬美元。從他跟賣方房仲談判的積極程度來看，我不覺得其他房仲能幫我們省這麼多。
 
-So it's safe to say, Claude Code saved us $10K. It was off of a $100 subscription - so it gave me an ROI of 100x that month.
+所以可以說，Claude Code 幫我們省了一萬美元。那只是一個月 100 美元的訂閱費——所以那個月它給了我 100 倍的投資報酬率。

@@ -38,9 +38,9 @@ Use the gh CLI to analyze this workflow run. Your investigation should:
    - If a fix PR exists, note it in your report and skip the recommendation section
 
 Write a final report with:
-- Summary of failure (what specifically triggered the exit code 1)
-- Flakiness assessment (one-time vs recurring, success rate)
-- Breaking commit (if identified and verified)
-- Root cause analysis (based on the ACTUAL failure trigger)
-- Existing fix PR (if found - include PR number and link)
-- Recommendation (skip if fix PR already exists)
+- 失敗摘要（具體是什麼觸發了 exit code 1）
+- Flakiness 評估（一次性 vs 重複發生，成功率）
+- Breaking commit（如果已識別且驗證過）
+- 根本原因分析（基於實際的失敗觸發點）
+- 既有的修復 PR（如果有的話 - 附上 PR 編號和連結）
+- 建議（如果已有修復 PR 就跳過）

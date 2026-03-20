@@ -1,47 +1,47 @@
-# 10 Claude Code tips from Boris, the creator of Claude Code, summarized
+# Claude Code 創作者 Boris 的 10 個技巧摘要
 
-Boris Cherny, the creator of Claude Code, recently shared [10 tips on X](https://x.com/bcherny/status/2017742741636321619) sourced from the Claude Code team. Here's a quick summary I created with the help of Claude Code and Opus 4.5.
+Claude Code 的創作者 Boris Cherny 最近在 [X 上分享了 10 個技巧](https://x.com/bcherny/status/2017742741636321619)，來源是 Claude Code 團隊。以下是我透過 Claude Code 和 Opus 4.5 整理的快速摘要。
 
-## 1. Do more in parallel
+## 1. 多做平行作業
 
-Spin up 3-5 git worktrees, each running its own Claude session. This is the single biggest productivity unlock from the team. Some people set up shell aliases (za, zb, zc) to hop between worktrees in one keystroke.
+開 3-5 個 git worktree，每個跑自己的 Claude session。這是團隊裡最大的生產力提升。有些人設了 shell alias（za、zb、zc）來一鍵切換 worktree。
 
-## 2. Start every complex task in plan mode
+## 2. 每個複雜任務都從 plan mode 開始
 
-Pour your energy into the plan so Claude can one-shot the implementation. If something goes sideways, switch back to plan mode and re-plan instead of pushing through. One person even spins up a second Claude to review the plan as a staff engineer.
+把精力投入在計畫上，這樣 Claude 就能一次搞定實作。如果出了問題，切回 plan mode 重新規劃，而不是硬著頭皮繼續。有人甚至開第二個 Claude 來以 staff engineer 的角度審查計畫。
 
-## 3. Invest in your CLAUDE.md
+## 3. 好好經營你的 CLAUDE.md
 
-After every correction, tell Claude: "Update your CLAUDE.md so you don't make that mistake again." Claude is eerily good at writing rules for itself. Keep iterating until Claude's mistake rate measurably drops.
+每次糾正之後，告訴 Claude：「更新你的 CLAUDE.md，這樣你就不會再犯同樣的錯。」Claude 特別擅長幫自己寫規則。持續迭代，直到 Claude 的犯錯率明顯下降。
 
-## 4. Create your own skills and commit them to git
+## 4. 建立自己的 skill 並 commit 到 git
 
-If you do something more than once a day, turn it into a skill or slash command. Examples from the team: a `/techdebt` command to find duplicated code, a command that syncs Slack/GDrive/Asana/GitHub into one context dump, and analytics agents that write dbt models.
+如果你一天做某件事超過一次，就把它變成一個 skill 或 slash command（斜線命令）。團隊的例子：一個 `/techdebt` 命令來找重複的程式碼、一個把 Slack/GDrive/Asana/GitHub 同步成一份 context dump 的命令，還有寫 dbt model 的分析 agent。
 
-## 5. Claude fixes most bugs by itself
+## 5. Claude 自己能修大部分的 bug
 
-Paste a Slack bug thread into Claude and just say "fix." Or say "Go fix the failing CI tests." Don't micromanage how. You can also point Claude at docker logs to troubleshoot distributed systems.
+把 Slack 上的 bug 討論串貼給 Claude，然後說「修。」或者說「去修那些失敗的 CI 測試。」不要微管理怎麼修。你也可以把 docker log 丟給 Claude 來排查分散式系統的問題。
 
-## 6. Level up your prompting
+## 6. 提升你的 prompting 技巧
 
-Challenge Claude - say "Grill me on these changes and don't make a PR until I pass your test." After a mediocre fix, say "Knowing everything you know now, scrap this and implement the elegant solution." Write detailed specs and reduce ambiguity - the more specific, the better the output.
+挑戰 Claude——說「好好考考我這些改動，在我通過你的測試之前不要開 PR。」在一個平庸的修復之後，說「根據你現在知道的一切，丟掉這個，實作那個優雅的方案。」寫詳細的 spec 並減少模糊空間——越具體，輸出越好。
 
-## 7. Terminal and environment setup
+## 7. Terminal 和環境設定
 
-The team loves Ghostty. Use `/statusline` to show context usage and git branch. Color-code your terminal tabs. Use voice dictation - you speak 3x faster than you type (hit fn twice on macOS).
+團隊愛用 Ghostty。用 `/statusline` 來顯示 context 使用量和 git branch。用顏色標記你的 terminal 分頁。用語音輸入——你說話的速度是打字的 3 倍（在 macOS 上按兩次 fn 鍵）。
 
-## 8. Use subagents
+## 8. 使用 subagent（子代理）
 
-Say "use subagents" when you want Claude to throw more compute at a problem. Offload tasks to subagents to keep your main context window clean. You can also route permission requests to Opus 4.5 via a hook to auto-approve safe ones.
+當你想讓 Claude 投入更多運算資源時，說「use subagents」。把任務分配給 subagent 來保持你主要的 context window 乾淨。你也可以透過 hook 把權限請求導向 Opus 4.5 來自動批准安全的操作。
 
-## 9. Use Claude for data and analytics
+## 9. 用 Claude 做資料和分析
 
-Use Claude with the `bq` CLI (or any database CLI/MCP/API) to pull and analyze metrics. Boris says he hasn't written a line of SQL in 6+ months.
+用 Claude 搭配 `bq` CLI（或任何資料庫 CLI/MCP/API）來拉取和分析指標。Boris 說他已經超過 6 個月沒寫過一行 SQL 了。
 
-## 10. Learning with Claude
+## 10. 用 Claude 來學習
 
-Enable the "Explanatory" or "Learning" output style in `/config` to have Claude explain the why behind its changes. You can also have Claude generate visual HTML presentations, draw ASCII diagrams of codebases, or build a spaced-repetition learning skill.
+在 `/config` 裡啟用「Explanatory」或「Learning」輸出風格，讓 Claude 解釋它改動背後的原因。你也可以讓 Claude 產生視覺化的 HTML 簡報、畫 ASCII 的程式碼架構圖，或建立一個 spaced-repetition（間隔重複）學習 skill。
 
 ---
 
-I resonate with a lot of these tips, so I recommend trying out at least a few of them. If you're looking for more Claude Code tips, I have a repo with 45 tips of my own here: [claude-code-tips](https://github.com/ykdojo/claude-code-tips)
+我對很多這些技巧都很有共鳴，所以我建議至少試試其中幾個。如果你想看更多 Claude Code 技巧，我有一個收集了 45 個自己的技巧的 repo 在這裡：[claude-code-tips](https://github.com/ykdojo/claude-code-tips)

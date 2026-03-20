@@ -2,24 +2,24 @@
 
 ## context-bar.sh
 
-A two-line status line script for Claude Code that shows model, directory, git branch, uncommitted file count, sync status with origin, context usage, and your last message.
+一個兩行的狀態列 script，用於 Claude Code，會顯示 model、目錄、git branch、未 commit 的檔案數、跟 origin 的同步狀態、context 使用量，以及你的上一條訊息。
 
-**Example output:**
+**範例輸出：**
 ```
 Opus 4.5 | 📁claude-code-tips | 🔀main (scripts/context-bar.sh uncommitted, synced 12m ago) | ██░░░░░░░░ 18% of 200k tokens
 💬 This is good. I don't think we need to change the documentation as long as we don't say that the default color is orange el...
 ```
 
-### Installation
+### 安裝
 
-1. Copy the script to your Claude scripts directory:
+1. 把 script 複製到你的 Claude scripts 目錄：
    ```bash
    mkdir -p ~/.claude/scripts
    cp context-bar.sh ~/.claude/scripts/
    chmod +x ~/.claude/scripts/context-bar.sh
    ```
 
-2. Update your `~/.claude/settings.json`:
+2. 更新你的 `~/.claude/settings.json`：
    ```json
    {
      "statusLine": {
@@ -29,36 +29,36 @@ Opus 4.5 | 📁claude-code-tips | 🔀main (scripts/context-bar.sh uncommitted, 
    }
    ```
 
-That's it!
+搞定！
 
-### Color Themes
+### 顏色主題
 
-The script supports optional color themes for the model name and progress bar. Edit the `COLOR` variable at the top of the script:
+這個 script 支援選用顏色主題來設定 model 名稱和進度條的顏色。編輯 script 頂部的 `COLOR` 變數：
 
 ```bash
 # Color theme: gray, orange, blue, teal, green, lavender, rose, gold, slate, cyan
 COLOR="orange"
 ```
 
-Preview all options by running `bash scripts/color-preview.sh`:
+執行 `bash scripts/color-preview.sh` 預覽所有選項：
 
 ![Color preview options](color-preview.png)
 
-### Requirements
+### 需求
 
-- `jq` (for JSON parsing)
+- `jq`（用來解析 JSON）
 - `bash`
-- `git` (optional, for branch display)
-- Claude Code 2.0.65+ (verified to work; older versions may not have the required JSON fields - check earlier commits for older versions)
+- `git`（選用，用來顯示 branch）
+- Claude Code 2.0.65+（確認可用；更舊的版本可能沒有所需的 JSON 欄位——舊版本請查看更早的 commit）
 
-### How it works
+### 運作原理
 
-Claude Code passes session metadata to status line commands via stdin as JSON, including:
-- `model.display_name` - The model name
-- `cwd` - Current working directory
-- `context_window.total_input_tokens` - Total input tokens used
-- `context_window.total_output_tokens` - Total output tokens used
-- `context_window.context_window_size` - Maximum context window size
-- `transcript_path` - Path to the session transcript JSONL file
+Claude Code 會透過 stdin 以 JSON 格式把 session metadata 傳給狀態列指令，包含：
+- `model.display_name` - Model 名稱
+- `cwd` - 當前工作目錄
+- `context_window.total_input_tokens` - 已使用的 input token 總數
+- `context_window.total_output_tokens` - 已使用的 output token 總數
+- `context_window.context_window_size` - 最大 context window 大小
+- `transcript_path` - Session transcript JSONL 檔案的路徑
 
-The script uses these JSON fields to calculate context usage (input + output tokens), showing percentage of the context window. Use `/context` for precise token breakdown.
+這個 script 用這些 JSON 欄位來計算 context 使用量（input + output tokens），顯示 context window 的使用百分比。用 `/context` 可以看精確的 token 明細。

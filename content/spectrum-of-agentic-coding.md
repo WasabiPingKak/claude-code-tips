@@ -1,79 +1,79 @@
-# The spectrum of agentic coding: From vibe coding to high-quality software engineering
+# Agentic coding 的光譜：從 vibe coding 到高品質軟體工程
 
-After spending over a billion tokens on AI-assisted coding over the past two and a half years - ever since I created my first agentic coding tool [Kaguya](https://github.com/ykdojo/kaguya) - I've come to a realization: vibe coding and traditional software engineering are not opposites. You can enhance vibe coding by injecting your software engineering knowledge and traditional software engineering practices. With that, vibe coding becomes *agentic coding with discipline*, *agentic software engineering*, and eventually, just high-quality software engineering. In other words, vibe coding is a spectrum.
+在過去兩年半裡，我在 AI 輔助寫程式上花了超過十億個 token——從我建立第一個 agentic coding 工具 [Kaguya](https://github.com/ykdojo/kaguya) 開始——我得出了一個體悟：vibe coding 和傳統軟體工程不是對立的。你可以透過注入你的軟體工程知識和傳統軟體工程實踐來強化 vibe coding。這樣一來，vibe coding 就變成了*有紀律的 agentic coding*、*agentic 軟體工程*，最終就只是高品質軟體工程。換句話說，vibe coding 是一個光譜。
 
-![Spectrum of agentic coding](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/content/spectrum-chart.png)
+![Agentic coding 的光譜](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/content/spectrum-chart.png)
 
-## Four levels of agentic/vibe coding
+## Agentic/vibe coding 的四個層級
 
 ![50 shades of agentic coding](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/content/50-shades-of-agentic-coding.jpeg)
 
-### Level 1: Vibe coding
+### 第一級：Vibe coding
 
-At its shallowest, vibe coding means you forget the code even exists. You just let AI go wild and let it write, write, write. Error logs? Don't even read them - just throw them at the AI. Let AI handle everything.
+最淺的層次，vibe coding 就是你忘了程式碼的存在。你就讓 AI 隨便搞，讓它寫、寫、寫。錯誤 log？連看都不看——直接丟給 AI。讓 AI 處理一切。
 
-Version control? What's that? Security? Yeah, I lock my door at night.
+版本控制？那是什麼？安全性？嗯，我晚上有鎖門啦。
 
-This level is perfectly fine for one-off projects, quick prototypes, throwaway scripts. But don't expect it to be maintainable in the long term.
+這個層級對於一次性的專案、快速原型、用完即丟的腳本來說完全沒問題。但不要期望它長期可維護。
 
-### Level 2: Agentic coding with discipline
+### 第二級：有紀律的 agentic coding
 
-At this level, you start introducing some structure:
+在這個層級，你開始引入一些結構：
 
-- **Version control**: You're using Git and GitHub or similar
-- **File-level understanding**: You know roughly what each file does and how they interact with each other
-- **Basic security precautions**
-- **Testing**: You make sure your app actually works in most cases
+- **版本控制**：你有在用 Git 和 GitHub 或類似的工具
+- **檔案層級的理解**：你大概知道每個檔案在做什麼，以及它們之間如何互動
+- **基本的安全防護**
+- **測試**：你確保你的 app 在大多數情況下真的能動
 
-### Level 3: Agentic software engineering
+### 第三級：Agentic 軟體工程
 
-This is where it starts becoming production-ready.
+這是開始能上 production（正式環境）的階段。
 
-- **Tests**: AI-written or human-written, but you verify they're actually testing what they're supposed to test. You don't always read every line, but you make sure they look good.
-- **Pre-commit hooks**: These solve a lot of what I sometimes see people use Claude Code hooks for - formatting issues, linting, simple checks.
-- **CI jobs**: For continuous testing
-- **Function-level understanding**: You know what each class and function does. You might not read every line, but you have deeper understanding than just file-level.
-- **Quality control measures**: Careful manual testing, end-to-end tests, one-shot AI code reviews, regression checks
+- **測試**：不管是 AI 寫的還是人寫的，但你會驗證它們真的在測試該測的東西。你不一定每一行都看，但你確保它們看起來沒問題。
+- **Pre-commit hook**：這解決了很多我有時看到人們用 Claude Code hook 來處理的問題——格式化問題、linting、簡單的檢查。
+- **CI job**：用於持續測試
+- **函式層級的理解**：你知道每個 class 和 function 在做什麼。你可能不會讀每一行，但你的理解比檔案層級更深。
+- **品質控管措施**：仔細的手動測試、end-to-end 測試、一次性的 AI code review、regression 檢查
 
-### Level 4: High-quality software engineering
+### 第四級：高品質軟體工程
 
-Even though this is still AI-assisted coding, the quality is indistinguishable from handwritten code by, say, a staff engineer - ideally done faster.
+雖然這仍然是 AI 輔助寫程式，但品質跟由 staff engineer 手寫的程式碼沒有區別——理想情況下速度更快。
 
-- **Line-by-line understanding**: When sending a PR, you might send it as a draft first and ensure each line is correct and makes sense
-- **Self-reflection loops**: By asking questions like "Are you sure about this? What about these different approaches?" you're able to get the model to reflect on itself to catch its own mistakes and have big picture trade-off discussions.
-- **AI-powered interactive code reviews**: Not just one-shot AI reviews. You pull changes locally and first make sure they run. Then you interview AI about each file, function, class, and even individual lines - dig as deep as you need to.
-- **Advanced research methods**: For architectural decisions:
-  - Postgres vs. Cassandra?
-  - AWS vs. Google Cloud vs. Render?
-  - The best way to run a local transcription model on Mac?
+- **逐行理解**：送 PR 時，你可能會先送一個 draft，確保每一行都是正確的、合理的
+- **自我反思迴圈**：透過問「你確定嗎？那這些不同的方法呢？」之類的問題，你可以讓模型反思自己，抓出自己的錯誤，並進行大方向的權衡討論。
+- **AI 驅動的互動式 code review**：不只是一次性的 AI review。你把改動拉到本地，先確保它們能跑。然後你針對每個檔案、函式、class，甚至個別行來詢問 AI——需要多深就挖多深。
+- **進階研究方法**：用於架構決策：
+  - Postgres vs. Cassandra？
+  - AWS vs. Google Cloud vs. Render？
+  - 在 Mac 上跑本地轉錄模型的最佳方式？
 
-  You use tools like deep research or Claude Code with web search and [Reddit fetch](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#tip-11-use-gemini-cli-as-a-fallback-for-blocked-sites) to do the research, but also check the sources if necessary.
-- **AI-powered quality control**: In addition to everything we've discussed so far, you may also have things like [background Claude Code jobs testing your CLI](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#tip-9-complete-the-write-test-cycle-for-autonomous-tasks) if you're creating a CLI, or [AI with browser access testing your UI](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#creative-testing-strategies) if you're working on a web app. In addition, you might have things like multi-platform testing (Windows, Linux, Mac), security and performance checks, and so on.
-- **Accelerated learning**: Instead of just letting AI write code, you ask questions like "Why did you write it this way?" or "What does this particular line mean?" Essentially, you use AI to deepen your domain expertise instead of letting it handle everything.
+  你用 deep research 或 Claude Code 搭配 web search 和 [Reddit fetch](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#tip-11-use-gemini-cli-as-a-fallback-for-blocked-sites) 來做研究，但必要時也會去確認來源。
+- **AI 驅動的品質控管**：除了前面討論過的一切，你可能還會有像是[背景 Claude Code 任務來測試你的 CLI](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#tip-9-complete-the-write-test-cycle-for-autonomous-tasks)（如果你在做 CLI 的話），或者[讓有瀏覽器存取權限的 AI 測試你的 UI](https://github.com/ykdojo/claude-code-tips?tab=readme-ov-file#creative-testing-strategies)（如果你在做 web app 的話）。此外，你可能還會做像是跨平台測試（Windows、Linux、Mac）、安全性和效能檢查等等。
+- **加速學習**：不只是讓 AI 寫程式碼，你會問「你為什麼這樣寫？」或「這一行具體是什麼意思？」之類的問題。基本上，你是用 AI 來加深你的領域專業，而不是讓它什麼都包辦。
 
-## The agentic coding matrix
+## Agentic coding 矩陣
 
-To summarize, I created this simple matrix as a shorthand for these four levels:
+總結一下，我建立了這個簡單的矩陣作為這四個層級的速查表：
 
-| Level | Code Quality | Speed | Testing | Code Reviews |
-|-------|--------------|-------|---------|--------------|
-| **Vibe Coding** | Low | Lightning | Bare minimum | None |
-| **Agentic Coding with Discipline** | Okay | Faster | Sufficient | Brief |
-| **Agentic Software Engineering** | Medium | Fast | Thorough | One-shot |
-| **High-Quality Software Engineering** | High | Decent | Rock solid | Interactive |
+| 層級 | 程式碼品質 | 速度 | 測試 | Code Review |
+|-------|-----------|------|------|-------------|
+| **Vibe Coding** | 低 | 閃電般 | 最低限度 | 無 |
+| **有紀律的 Agentic Coding** | 尚可 | 較快 | 足夠 | 簡略 |
+| **Agentic 軟體工程** | 中等 | 快 | 徹底 | 一次性 |
+| **高品質軟體工程** | 高 | 不錯 | 堅如磐石 | 互動式 |
 
-## Be flexible
+## 保持彈性
 
-At the end of the day, you should master all four levels and be flexible about which one you use.
+說到底，你應該精通這四個層級，並且靈活地選擇使用哪一個。
 
-Sometimes staying at the vibe coding level is fine - quick prototypes, one-off scripts, experiments. Sometimes you need high-quality software engineering - medical software, large-scale systems, other mission-critical software.
+有時候停在 vibe coding 的層級就好——快速原型、一次性腳本、實驗。有時候你需要高品質軟體工程——醫療軟體、大規模系統、其他關鍵任務軟體。
 
-The first iteration of your code might be "slop" - low-quality AI-generated code. That's okay. You can improve it over time before you send your PR or mark your draft PR as ready.
+你的程式碼第一版可能是「垃圾」——低品質的 AI 生成程式碼。沒關係。你可以在送 PR 或把 draft PR 標記為 ready 之前逐步改善它。
 
-## The real problem with "slop"
+## 「垃圾程式碼」的真正問題
 
-![Midwit meme about AI-assisted coding](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/content/midwit-meme.png)
+![關於 AI 輔助寫程式的 Midwit meme](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/content/midwit-meme.png)
 
-People complain about AI-generated code being slop. But the thing is, it's only slop because they don't put enough work into it.
+大家抱怨 AI 生成的程式碼是垃圾。但問題是，它之所以是垃圾，是因為他們沒有花夠多功夫在上面。
 
-More tokens spent doesn't necessarily have to mean you produce more s**t. Depending on how you use AI, it could also mean higher quality of code, better research, and better understanding of your own work.
+花更多 token 不一定意味著你製造更多垃圾。取決於你怎麼用 AI，它也可以代表更高品質的程式碼、更好的研究，以及對你自己工作更深的理解。

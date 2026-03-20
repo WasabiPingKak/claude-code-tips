@@ -3,13 +3,13 @@ name: review-claudemd
 description: Review recent conversations to find improvements for CLAUDE.md files.
 ---
 
-# Review CLAUDE.md from conversation history
+# 從對話歷史回顧 CLAUDE.md
 
-Analyze recent conversations to improve both global (~/.claude/CLAUDE.md) and local (project) CLAUDE.md files.
+分析最近的對話來改善全域（~/.claude/CLAUDE.md）和本地（專案）的 CLAUDE.md 檔案。
 
-## Step 1: Find conversation history
+## 步驟一：找到對話歷史
 
-The project's conversation history is in `~/.claude/projects/`. The folder name is the project path with slashes replaced by dashes.
+專案的對話歷史在 `~/.claude/projects/`。資料夾名稱是專案路徑把斜線換成破折號。
 
 ```bash
 # Find the project folder (replace / with -)
@@ -18,9 +18,9 @@ CONVO_DIR=~/.claude/projects/-${PROJECT_PATH}
 ls -lt "$CONVO_DIR"/*.jsonl | head -20
 ```
 
-## Step 2: Extract recent conversations
+## 步驟二：擷取最近的對話
 
-Extract the 15-20 most recent conversations (excluding the current one) to a temp directory:
+把最近的 15-20 個對話（不含當前這個）擷取到暫存目錄：
 
 ```bash
 SCRATCH=/tmp/claudemd-review-$(date +%s)
@@ -43,14 +43,14 @@ done
 ls -lhS "$SCRATCH"
 ```
 
-## Step 3: Spin up Sonnet subagents
+## 步驟三：啟動 Sonnet subagent
 
-Launch parallel Sonnet subagents to analyze conversations. Each agent should read:
-- Global CLAUDE.md: `~/.claude/CLAUDE.md`
-- Local CLAUDE.md: `./CLAUDE.md` (if exists)
-- Batch of conversation files
+啟動平行的 Sonnet subagent 來分析對話。每個 agent 應該讀取：
+- 全域 CLAUDE.md：`~/.claude/CLAUDE.md`
+- 本地 CLAUDE.md：`./CLAUDE.md`（如果存在的話）
+- 一批對話檔案
 
-Give each agent this prompt template:
+給每個 agent 這個 prompt 模板：
 
 ```
 Read:
@@ -67,18 +67,18 @@ Analyze the conversations against BOTH CLAUDE.md files. Find:
 Be specific. Output bullet points only.
 ```
 
-Batch conversations by size:
-- Large (>100KB): 1-2 per agent
-- Medium (10-100KB): 3-5 per agent
-- Small (<10KB): 5-10 per agent
+依對話大小分批：
+- 大檔（>100KB）：每個 agent 1-2 個
+- 中檔（10-100KB）：每個 agent 3-5 個
+- 小檔（<10KB）：每個 agent 5-10 個
 
-## Step 4: Aggregate findings
+## 步驟四：彙整結果
 
-Combine results from all agents into a summary with these sections:
+把所有 agent 的結果整合成一份摘要，包含以下章節：
 
-1. **Instructions violated** - existing rules that weren't followed (need stronger wording)
-2. **Suggested additions - LOCAL** - project-specific patterns
-3. **Suggested additions - GLOBAL** - patterns that apply everywhere
-4. **Potentially outdated** - items that may no longer be relevant
+1. **被違反的指令** - 既有的規則沒被遵守（需要加強措辭）
+2. **建議新增 - 本地** - 專案特定的模式
+3. **建議新增 - 全域** - 適用於所有地方的模式
+4. **可能過時的項目** - 可能不再相關的東西
 
-Present as tables or bullet points. Ask user if they want edits drafted.
+用表格或條列呈現。問使用者要不要草擬修改。

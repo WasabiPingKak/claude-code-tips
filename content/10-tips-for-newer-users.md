@@ -1,51 +1,51 @@
-# 10 Claude Code tips for newer users
+# 給新手的 10 個 Claude Code 技巧
 
-I've noticed more and more people are trying Claude Code and Cowork for the first time recently, so I wanted to give them a few pointers to get started with.
+最近我發現越來越多人第一次嘗試 Claude Code 和 Cowork，所以我想給他們一些入門的建議。
 
-Full repo with 45 tips: https://github.com/ykdojo/claude-code-tips
+完整的 45 個技巧合集：https://github.com/ykdojo/claude-code-tips
 
 ## 1. Terminal vs VS Code vs Desktop vs Cowork
 
-The terminal version is generally the most advanced one - it's where Claude Code started, and I think it gets the most development time, so it tends to be the most feature-rich. Some people prefer the VS Code extension, and less technical users might prefer Cowork. But if you can use the terminal, I'd recommend starting there.
+Terminal 版本通常是最進階的——Claude Code 就是從這裡開始的，我覺得它投入的開發時間最多，所以功能也最豐富。有些人比較喜歡 VS Code 擴充套件，技術背景較少的使用者可能會偏好 Cowork。但如果你能用 terminal，我建議從那裡開始。
 
-## 2. Installing a specific version
+## 2. 安裝特定版本
 
-For the terminal version, there's an npm option and a native binary option. The native binary works well, but I personally recommend installing version 2.1.19 instead of the latest, because newer versions can be buggy (or pick a version you like). You can install a specific version like this:
+Terminal 版本有 npm 和 native binary（原生二進位檔）兩種安裝方式。Native binary 運作得不錯，但我個人建議安裝 2.1.19 版而不是最新版，因為新版可能會有 bug（或者選一個你喜歡的版本）。你可以這樣安裝特定版本：
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash -s 2.1.19
 ```
 
-On Windows PowerShell:
+Windows PowerShell 上：
 
 ```powershell
 & ([scriptblock]::Create((irm https://claude.ai/install.ps1))) 2.1.19
 ```
 
-You can verify your installation with `claude --version`.
+你可以用 `claude --version` 來確認安裝結果。
 
-## 3. Back up important files and use version control
+## 3. 備份重要檔案並使用版本控制
 
-Don't be [that person](https://www.reddit.com/r/ClaudeAI/comments/1pgxckk/claude_cli_deleted_my_entire_home_directory_wiped/) who lost their entire home directory. Back up anything important before you start, and use version control (Git) for your projects. Claude Code can make mistakes, and having version control means you can always roll back if something goes wrong.
+不要成為[那個人](https://www.reddit.com/r/ClaudeAI/comments/1pgxckk/claude_cli_deleted_my_entire_home_directory_wiped/)——整個家目錄都被刪掉了。開始之前先備份所有重要的東西，並對你的專案使用版本控制（Git）。Claude Code 可能會犯錯，有了版本控制就代表你隨時可以回滾。
 
-## 4. Learn to test the output well
+## 4. 學會好好測試輸出結果
 
-The thing with Claude Code and AI in general is that they can introduce subtle bugs. So make sure to test the outputs really well so that you don't end up with a lot of bugs. You can even have Claude Code test its own code - for example, by having it write tests. Just make sure the tests look valid.
+Claude Code 和 AI 整體的問題在於，它們可能會引入不容易察覺的 bug。所以一定要好好測試輸出結果，這樣才不會累積一堆 bug。你甚至可以讓 Claude Code 測試自己的程式碼——比如讓它寫測試。只要確保測試看起來是合理的就好。
 
-## 5. Put repeated instructions in CLAUDE.md
+## 5. 把重複的指令放進 CLAUDE.md
 
-If you find yourself telling Claude Code the same thing over and over again, put those instructions in a CLAUDE.md file. You can just ask Claude Code to do it on your behalf - either in the project folder (`./CLAUDE.md`) for project-specific instructions, or globally (`~/.claude/CLAUDE.md`) for things that apply everywhere. It should be able to find the right file and edit it for you.
+如果你發現自己一直在對 Claude Code 說同樣的事情，就把那些指令放到 CLAUDE.md 檔案裡。你可以直接叫 Claude Code 幫你做——放在專案資料夾（`./CLAUDE.md`）裡是專案專用的指令，或者放在全域位置（`~/.claude/CLAUDE.md`）就是到處都適用的。它應該能找到正確的檔案並幫你編輯。
 
-If Claude Code isn't following an instruction consistently, another option is to set up a [hook](https://docs.anthropic.com/en/docs/claude-code/hooks). For example, if you want it to always use `python3.12` instead of `python3`, you can create a hook that stops it from running `python3` and tells it to use `python3.12` instead.
+如果 Claude Code 沒有一致地遵循某個指令，另一個選擇是設定 [hook](https://docs.anthropic.com/en/docs/claude-code/hooks)。例如，如果你想讓它永遠使用 `python3.12` 而不是 `python3`，你可以建立一個 hook 來阻止它執行 `python3`，並告訴它改用 `python3.12`。
 
-## 6. Set up browser integration
+## 6. 設定瀏覽器整合
 
-If you need Claude Code to interact with web pages, I recommend these two options:
+如果你需要 Claude Code 跟網頁互動，我推薦以下兩個選項：
 
-- **Playwright MCP** - Generally works better for most tasks. Install it with: `claude mcp add -s user playwright npx @playwright/mcp@latest`
-- **Claude in Chrome** - Toggle with `/chrome`. Useful when you need a logged-in state from your own browser profile.
+- **Playwright MCP** - 大多數任務表現比較好。用這個指令安裝：`claude mcp add -s user playwright npx @playwright/mcp@latest`
+- **Claude in Chrome** - 用 `/chrome` 切換。當你需要使用自己瀏覽器設定檔的登入狀態時很好用。
 
-If you use Claude in Chrome, I'd recommend adding this to your CLAUDE.md to make it more reliable:
+如果你用 Claude in Chrome，我建議在你的 CLAUDE.md 加入以下內容來讓它更穩定：
 
 ```markdown
 # Claude for Chrome
@@ -56,45 +56,45 @@ If you use Claude in Chrome, I'd recommend adding this to your CLAUDE.md to make
 - NEVER take screenshots unless explicitly requested by the user
 ```
 
-## 7. Learn to quickly review the output
+## 7. 學會快速審查輸出
 
-I personally use GitHub Desktop for this. It has a nice diff view that makes it easy to see exactly what Claude Code changed. You can also have Claude Code create a draft PR and review it there before turning it into a real PR.
+我個人用 GitHub Desktop 來做這件事。它有很好的 diff 檢視，可以輕鬆看到 Claude Code 到底改了什麼。你也可以讓 Claude Code 建立一個 draft PR（草稿拉取請求），在那邊審查後再轉成正式的 PR。
 
-## 8. Research, plan, execute, test
+## 8. 研究、規劃、執行、測試
 
-1. **Research** - Put enough time into understanding the problem first. Build up domain knowledge so you can guide Claude Code effectively.
-2. **Plan** - Have Claude Code come up with a plan before writing code. You can use plan mode (`/plan` or Shift+Tab) for this.
-3. **Execute** - Write the code.
-4. **Test** - Make sure everything actually works.
+1. **研究** - 先花夠多時間理解問題。建立領域知識，這樣你才能有效引導 Claude Code。
+2. **規劃** - 在寫程式碼之前，讓 Claude Code 先想出一個計畫。你可以用 plan mode（`/plan` 或 Shift+Tab）來做這件事。
+3. **執行** - 寫程式碼。
+4. **測試** - 確保一切真的能動。
 
-## 9. Keep each conversation short
+## 9. 保持每段對話簡短
 
-When you start a new conversation with Claude Code, it performs the best because it doesn't have all the added complexity of the previous context. As you talk to it longer and longer, the context gets longer and the performance tends to go down.
+當你開始一段新的 Claude Code 對話時，它的表現是最好的，因為沒有之前上下文帶來的複雜度。隨著你跟它聊越久，context 越來越長，效能通常會下降。
 
-So start a new conversation for every new topic, or whenever the performance starts to drop. It's better to have many short, focused conversations than one long one.
+所以每個新主題就開一段新對話，或者每當效能開始下降時就換一段。很多短而專注的對話比一段很長的對話好得多。
 
-## 10. Learn to juggle a few sessions at the same time
+## 10. 學會同時處理多個 session
 
-Once you're comfortable with Claude Code, try running two or three sessions at the same time in different terminal tabs. My method is what I call a "cascade" - whenever I start a new task, I open a new tab on the right. Then I sweep left to right, going from oldest tasks to newest.
+當你對 Claude Code 比較熟練後，試試同時在不同的 terminal 分頁跑兩到三個 session。我的方法是我稱之為「瀑布式」的做法——每當我開始一個新任務，我就在右邊開一個新分頁。然後從左到右掃過去，從最舊的任務到最新的。
 
-I'd recommend focusing on at most three or four tasks at a time. More than that and it gets hard to keep track of what's happening.
+我建議同時最多專注在三到四個任務上。超過這個數量就很難追蹤每個任務的進度了。
 
-## 11. (Bonus) Use Git worktrees for parallel branch work
+## 11.（加碼）用 Git worktree 來平行處理不同分支
 
-If you're working on multiple things at the same time in the same project and you don't want them to get conflicted, Git worktrees are a great way to do that. You can just ask Claude Code to create a git worktree and start working on it there - you don't have to worry about the specific syntax.
+如果你在同一個專案裡同時做好幾件事，又不想讓它們互相衝突，Git worktree 是個很好的方式。你可以直接叫 Claude Code 建立一個 git worktree 然後在那邊工作——不用擔心具體的語法。
 
-The basic idea is that you can work on a different branch in a different directory.
+基本的概念就是你可以在不同的目錄裡處理不同的 branch。
 
-### What are git worktrees?
+### 什麼是 git worktree？
 
-A git worktree is just like any other git branch, but with a new directory specifically assigned to it.
+Git worktree 就像是任何其他的 git branch，但有一個專門指定給它的新目錄。
 
-So if you're working on, let's say, the main branch and feature-branch-1, then without git worktrees, you can only work on them one at a time because your project folder can only be set to one branch at a time.
+所以如果你正在處理，比方說，main branch 和 feature-branch-1，那不用 git worktree 的話，你一次只能處理一個，因為你的專案資料夾一次只能設定在一個 branch 上。
 
-However, with a git worktree, you can keep working on the main branch (or any other branch for that matter) in the original project folder, and at the same time work on feature-branch-1 in a new folder.
+但是有了 git worktree，你可以繼續在原本的專案資料夾裡處理 main branch（或任何其他 branch），同時在一個新的資料夾裡處理 feature-branch-1。
 
-![Git worktrees diagram showing parallel branch work in separate directories](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/assets/git-worktrees.png)
+![Git worktrees 圖示：在不同目錄平行處理不同分支](https://raw.githubusercontent.com/ykdojo/claude-code-tips/main/assets/git-worktrees.png)
 
 ---
 
-For a more comprehensive list of 25 tips, feel free to check my other Reddit post: https://www.reddit.com/r/ClaudeAI/comments/1qgccgs/25_claude_code_tips_from_11_months_of_intense_use/
+如果想看更完整的 25 個技巧，可以看我另一篇 Reddit 貼文：https://www.reddit.com/r/ClaudeAI/comments/1qgccgs/25_claude_code_tips_from_11_months_of_intense_use/
